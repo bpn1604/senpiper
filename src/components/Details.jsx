@@ -4,7 +4,8 @@ import { useTable } from 'react-table';
 
 const Details = () => {
     const data = JSON.parse(localStorage.getItem('feedbackData')) || [];
-
+    console.log(data);
+    
     const columns = React.useMemo(
         () => [
             {
@@ -21,19 +22,19 @@ const Details = () => {
             },
             {
                 Header: 'Service Quality',
-                accessor: 'service quality',
+                accessor: 'service',
             },
             {
                 Header: 'Beverage Quality',
-                accessor: 'beverage quality',
+                accessor: 'beverage',
             },
             {
                 Header: 'Restaurant Cleanliness',
-                accessor: 'restaurant cleanliness',
+                accessor: 'cleanliness',
             },
             {
                 Header: 'Overall Dining Experience',
-                accessor: 'overall dining experience',
+                accessor: 'overallExperience',
             },
         ],
         []
